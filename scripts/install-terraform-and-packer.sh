@@ -9,14 +9,14 @@ cd /usr/local/packer_0_10_0
 curl -O https://releases.hashicorp.com/packer/0.10.0/packer_0.10.0_darwin_amd64.zip
 unzip packer_0.10.0_darwin_amd64.zip
 
-cat <<EOT >> ~/.bash_profile
-
-# Terraform & Packer Paths.
-export PATH=/usr/local/packer_0_10_0/:/usr/local/terraform_0_6_14/:$PATH
-
-EOT
+echo '' >>~/.bash_profile
+echo '# Terraform & Packer Paths.' >>~/.bash_profile
+echo 'export PATH=/usr/local/packer_0_10_0/:/usr/local/terraform_0_6_14/:$PATH' >>~/.bash_profile
+echo '' >>~/.bash_profile
 
 source ~/.bash_profile
 
 terraform
 packer
+
+
